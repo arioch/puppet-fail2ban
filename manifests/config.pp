@@ -3,10 +3,12 @@
 #
 class fail2ban::config {
   $config_dir      = $::fail2ban::config_dir
+  $config_dir_mode = $::fail2ban::config_dir_mode
   $config_fail2ban = $::fail2ban::config_fail2ban
   $config_file     = $::fail2ban::config_file
   $config_group    = $::fail2ban::config_group
   $config_jail     = $::fail2ban::config_jail
+  $config_mode     = $::fail2ban::config_mode
   $config_user     = $::fail2ban::config_user
   $daemon_name     = $::fail2ban::daemon_name
 

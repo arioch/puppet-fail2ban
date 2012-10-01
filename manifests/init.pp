@@ -3,6 +3,8 @@
 #
 class fail2ban (
   $config_dir        = $fail2ban::params::config_dir,
+  $config_dir_action = $fail2ban::params::config_dir_action,
+  $config_dir_jail   = $fail2ban::params::config_dir_jail,
   $config_fail2ban   = $fail2ban::params::config_fail2ban,
   $config_file       = $fail2ban::params::config_file,
   $config_group      = $fail2ban::params::config_group,

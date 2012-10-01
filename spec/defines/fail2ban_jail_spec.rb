@@ -15,7 +15,7 @@ describe 'fail2ban::file' do
       let(:title) { '_entry_' }
       let(:params) {
         {
-          :log        => [ '_log1_', '_log2_' ]
+          :log => [ '_log1_', '_log2_' ]
         }
       }
 
