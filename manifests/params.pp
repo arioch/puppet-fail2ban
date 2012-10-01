@@ -11,8 +11,8 @@ class fail2ban::params {
   case $::operatingsystem {
     'Debian', 'Ubuntu': {
       $config_dir        = '/etc/fail2ban'
-      $config_fail2ban   = 'fail2ban/fail2ban.conf.debian.erb',
-      $config_file       = undef
+      $config_fail2ban   = 'fail2ban/fail2ban.conf.debian.erb'
+      $config_jail       = 'fail2ban/jail.conf.debian.erb'
       $daemon_hasrestart = true
       $daemon_hasstatus  = true
       $daemon_name       = 'fail2ban'
@@ -22,8 +22,8 @@ class fail2ban::params {
 
     'RedHat', 'CentOS', 'Fedora', 'Scientific', 'OEL', 'Amazon': {
       $config_dir        = '/etc/fail2ban'
-      $config_fail2ban   = 'fail2ban/fail2ban.conf.rhel.erb',
-      $config_jail       = 'fail2ban/jail.conf.rhel.erb',
+      $config_fail2ban   = 'fail2ban/fail2ban.conf.rhel.erb'
+      $config_jail       = 'fail2ban/jail.conf.rhel.erb'
       $daemon_hasrestart = true
       $daemon_hasstatus  = true
       $daemon_name       = 'fail2ban'
