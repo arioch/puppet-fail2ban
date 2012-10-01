@@ -32,10 +32,10 @@ class fail2ban::config {
       content => template($config_jail);
 
     "${config_dir}/action.d":
-      ensure => present;
+      ensure => directory;
 
     "${config_dir}/jail.d":
-      ensure => present;
+      ensure => directory;
   }
 }
 
