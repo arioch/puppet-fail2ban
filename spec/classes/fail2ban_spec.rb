@@ -20,17 +20,17 @@ describe 'fail2ban' do
       it { should create_class('fail2ban') }
       it { should include_class('fail2ban::install') }
       it { should include_class('fail2ban::config') }
- 
+
       it { should contain_file('/etc/fail2ban').with_ensure('directory') }
       it { should contain_package('fail2ban').with_ensure('present') }
-      it { should_not raise_error(Puppet::ParseError) }
- 
+      it { should_not raise_error }
+
       it do
         should contain_service('fail2ban').with(
           'enable'     => 'true',
           'ensure'     => 'running',
           'hasrestart' => 'true',
-          'hasstatus'  => 'true',
+          'hasstatus'  => 'true'
         )
       end
     end
